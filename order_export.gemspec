@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   #s.description = 'Add (optional) gem description here'
   s.required_ruby_version = '>= 1.8.7'
 
-  # s.author            = 'David Heinemeier Hansson'
-  # s.email             = 'david@loudthinking.com'
+  s.author            = '3months'
+  s.email             = 'contact@3months.com'
   # s.homepage          = 'http://www.rubyonrails.org'
   # s.rubyforge_project = 'actionmailer'
 
@@ -18,6 +18,8 @@ Gem::Specification.new do |s|
   s.has_rdoc = true
 
   s.add_dependency('spree_core', '>= 0.30.1')
+  s.add_dependency('fastercsv')
+  s.add_dependency('meta_search', '>= 1.1.1')
 
 end
 

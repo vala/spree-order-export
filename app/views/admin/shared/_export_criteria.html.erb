@@ -1,16 +1,16 @@
-<%= form_for @search do |s| %>
+<%= form_for @search, :url => '' do |s| %>
     <label><%= t("date_range") %></label><br />
     <div class="yui-g date-range-filter">
       <div class="yui-u sub-field first">
-        <%= s.spree_date_picker :created_at_greater_than %><br />
+        <%= s.text_field :created_at_greater_than, :class => 'datepicker' %><br />
         <label class="sub"><%= t("start") %></label>
       </div>
       <div class="yui-u sub-field">
-        <%= s.spree_date_picker :created_at_less_than %><br />
+        <%= s.text_field :created_at_less_than, :class => 'datepicker' %><br />
         <label><%= t("stop") %></label>
       </div>
       <div class="yui-u sub-field">
-        <%= s.check_box :completed_at_not_null, {:style => 'vertical-align: middle'} %><br />
+        <%= s.check_box :completed_at_is_not_null, :style => 'vertical-align: middle' %><br />
         <label><%= t("only_show_complete_orders") %></label>
       </div>
     </div>
